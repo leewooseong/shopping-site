@@ -1,0 +1,93 @@
+@font-face {
+    font-family: "SpoqaHanSansNeo-Regular";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff")
+        format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+html,
+button {
+    font-family: "SpoqaHanSansNeo-Regular";
+    font-size: 62.5%;
+}
+
+main {
+    /* margin-collapse 해결을 위한 코드 */
+    overflow: auto;
+    position: relative;
+}
+.product-list {
+    width: 126rem;
+    margin: 0 auto;
+    margin-top: 16rem;
+    margin-bottom: 15.6rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 46.2rem;
+    gap: 6rem;
+}
+.product-item {
+    color: #333333;
+    position: relative;
+    /* .product-name에서의 grid에서 쓰인 white-space: nowrap 이슈에 대한 해결책 */
+    min-width: 0;
+}
+.product-item img {
+    width: 100%;
+    box-sizing: border-box;
+    border: 0.1rem solid #bdbdbd;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+}
+.product-item .product-name {
+    width: 80%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* 말줄임 적용 */
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    margin-bottom: 1rem;
+}
+.product-item .product-price {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+}
+.product-item s {
+    margin-left: 1rem;
+    color: #828282;
+    font-size: 1.6rem;
+}
+.product-item strong {
+    margin-left: 1rem;
+    color: #6327fe;
+    font-size: 1.6rem;
+}
+.product-item .heart-btn {
+    position: absolute;
+    bottom: 4.3rem;
+    right: 0.2rem;
+    width: 1.8rem;
+    height: 1.6rem;
+    padding: 0;
+    background-color: #ffffff;
+    border: none;
+}
+.heart-btn img {
+    margin: 0;
+    width: 100%;
+    height: 1.6rem;
+    border: none;
+}
+
+.shopping-list-btn {
+    position: fixed;
+    top: 16rem;
+    left: calc(50% + 63rem + 6rem);
+    padding: 0;
+    background-color: transparent;
+    border: none;
+}
